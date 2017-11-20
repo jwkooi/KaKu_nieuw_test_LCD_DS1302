@@ -7,6 +7,8 @@
 // 30 dec 2016: Bug set date solved
 // 14 jan 2017: morning on if dark implemented
 // 15 jan 2017: evening on if dark (version Arduino 1.8.0)
+// 20 nov 2017: increase remote switching times from 8 to 32
+
 //#include <Arduino.h>  //in combination with tabs to be used but causing trouble compiling
 
 // LCD 16x2 with I2C
@@ -18,7 +20,7 @@ LiquidCrystal_I2C lcd(0x27, 2, 1, 0, 4, 5, 6, 7, 3, POSITIVE);  // Set the LCD I
 // Create a transmitter on address 18649618, using digital pin 11 to transmit,
 // with a period duration of 270ms (default), repeating the transmitted
 // code 2^3=8 times.
-NewRemoteTransmitter transmitter(18649618, 11, 270, 3);
+NewRemoteTransmitter transmitter(18649618, 11, 270, 5);
 
 //DS1302 Module time
 #include <virtuabotixRTC.h>
